@@ -7,49 +7,51 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function Nav() {
   return (
-    <Helmet>
-      {/* Basic SEO */}
-      <title>Alyntis Global Technologies LLC - IT Consulting & Staffing</title>
-      <meta name="description" content="Alyntis Global Technologies delivers expert IT consulting, staffing, and digital transformation services globally." />
-      <meta name="keywords" content="IT consulting, staffing solutions, digital transformation, cloud services, cybersecurity" />
-      <meta name="author" content="Alyntis Global Technologies LLC" />
+    <>
+      <Helmet>
+        {/* Basic SEO */}
+        <title>Alyntis Global Technologies LLC - IT Consulting & Staffing</title>
+        <meta name="description" content="Alyntis Global Technologies delivers expert IT consulting, staffing, and digital transformation services globally." />
+        <meta name="keywords" content="IT consulting, staffing solutions, digital transformation, cloud services, cybersecurity" />
+        <meta name="author" content="Alyntis Global Technologies LLC" />
 
-      {/* Open Graph / Facebook */}
-      <meta property="og:title" content="Alyntis Global Technologies LLC" />
-      <meta property="og:description" content="Expert IT consulting, staffing, and digital transformation services for global enterprises." />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://alyntisglobal.github.io/" />
-      <meta property="og:image" content="https://alyntisglobal.github.io/og-image.png" />
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content="Alyntis Global Technologies LLC" />
+        <meta property="og:description" content="Expert IT consulting, staffing, and digital transformation services for global enterprises." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://alyntisglobal.github.io/" />
+        <meta property="og:image" content="https://alyntisglobal.github.io/og-image.png" />
 
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Alyntis Global Technologies LLC" />
-      <meta name="twitter:description" content="IT consulting, staffing, and digital transformation solutions." />
-      <meta name="twitter:image" content="https://alyntisglobal.github.io/og-image.png" />
-    </Helmet>
-    <header className="bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center text-white font-bold">A</div>
-          <div>
-            <div className="text-lg font-semibold">Alyntis Global</div>
-            <div className="text-xs text-gray-500">Technologies LLC</div>
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Alyntis Global Technologies LLC" />
+        <meta name="twitter:description" content="IT consulting, staffing, and digital transformation solutions." />
+        <meta name="twitter:image" content="https://alyntisglobal.github.io/og-image.png" />
+      </Helmet>
+      <header className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center text-white font-bold">A</div>
+            <div>
+              <div className="text-lg font-semibold">Alyntis Global</div>
+              <div className="text-xs text-gray-500">Technologies LLC</div>
+            </div>
+          </Link>
+
+          <nav className="hidden md:flex items-center gap-6 text-gray-700">
+            <Link to="/about" className="hover:text-indigo-600">About</Link>
+            <Link to="/services" className="hover:text-indigo-600">Services</Link>
+            <Link to="/industries" className="hover:text-indigo-600">Industries</Link>
+            <Link to="/careers" className="hover:text-indigo-600">Careers</Link>
+            <Link to="/contact" className="text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded">Contact</Link>
+          </nav>
+
+          <div className="md:hidden">
+            <MobileMenu />
           </div>
-        </Link>
-
-        <nav className="hidden md:flex items-center gap-6 text-gray-700">
-          <Link to="/about" className="hover:text-indigo-600">About</Link>
-          <Link to="/services" className="hover:text-indigo-600">Services</Link>
-          <Link to="/industries" className="hover:text-indigo-600">Industries</Link>
-          <Link to="/careers" className="hover:text-indigo-600">Careers</Link>
-          <Link to="/contact" className="text-white bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded">Contact</Link>
-        </nav>
-
-        <div className="md:hidden">
-          <MobileMenu />
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 }
 
