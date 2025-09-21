@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function Nav() {
   return (
-    <<Helmet>
+    <Helmet>
       {/* Basic SEO */}
       <title>Alyntis Global Technologies LLC - IT Consulting & Staffing</title>
       <meta name="description" content="Alyntis Global Technologies delivers expert IT consulting, staffing, and digital transformation services globally." />
